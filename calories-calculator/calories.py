@@ -21,10 +21,10 @@ class Calories():
     # Calculate basal metabolic rate 
     def BMR(self, sex):
         
+        #Harris–Benedict equation
         if sex == "M":
             bmr = ((10*self.weight) + (6.25*self.height) - (5*self.age) + 5)
         else:   
-            #Harris–Benedict equation
             bmr = ((10*self.weight) + (6.25*self.height) - (5*self.age) - 161)
             #bmr = 370 + 21.6*self.LBM()
         return bmr
