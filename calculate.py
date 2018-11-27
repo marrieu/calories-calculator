@@ -1,5 +1,5 @@
     
-from calories-calculator.calories import Calories
+from caloriescalculator.calories import Calories
 
 print('Lets estimate your calorie intake..')
 
