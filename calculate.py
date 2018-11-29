@@ -3,28 +3,6 @@ from caloriescalculator.calories import Calories
 
 print('Lets estimate your calorie intake..')
 
-while True:
-    try:
-        weight = float(input("Enter your weight in kg: "))
-        # asserting weight is in Kg
-        if not weight < 120:
-            raise AssertionError('Weight needs to be in Kg. e.g: 61, 84..')
-        break
-    except AssertionError as e:
-        print(e)
-         
-
-while True:
-    try:
-        height = float(input("Enter your height in cm: "))
-        # asserting weight is in Kg
-        if not height > 100:
-            raise AssertionError('Height needs to be in centimeters. e.g: 167, 179..')
-        break
-    except AssertionError as e:
-        print(e)
-            
-    
 age = int(input("Enter your age: "))
 
 while True:
@@ -36,6 +14,26 @@ while True:
         break
     except AssertionError as e:
         print(e)
+        
+while True:
+    try:
+        weight = float(input("Enter your weight in kg: "))
+        # asserting weight is in Kg
+        if not weight < 120:
+            raise AssertionError('Weight needs to be in Kg. e.g: 61, 84..')
+        break
+    except AssertionError as e:
+        print(e)         
+
+while True:
+    try:
+        height = float(input("Enter your height in cm: "))
+        # asserting weight is in Kg
+        if not height > 100:
+            raise AssertionError('Height needs to be in centimeters. e.g: 167, 179..')
+        break
+    except AssertionError as e:
+        print(e)            
 
 C = Calories(weight, height, age, sex)
 
@@ -49,7 +47,7 @@ activity = float(input('''
 Enter your activity multiplier according to the table above (number between 1.2 to 1.9): '''))
 
 print('''Your daily calorie intake:
-{} for maintain
+{} for maintaining
 {} for losing
 {} for gaining '''.format(round(C.TDEE(activity)), round(C.cut()), round(C.bulk())))
 
