@@ -3,18 +3,20 @@ from caloriescalculator.calories import Calories
 
 print('Lets estimate your calorie intake..')
 
+# enter age
 age = int(input("Enter your age: "))
 
+# enter only M or F for sex
 while True:
     try:
-        sex = str(input("Enter your sex (M for Male and F for Female): "))
-        # asserting weight is in Kg
+        sex = str(input("Enter your sex (M for Male and F for Female): "))  
         if sex not in ['M','F']:
             raise AssertionError('Please enter the letter M or F')
         break
     except AssertionError as e:
         print(e)
         
+# enter weight in kg
 while True:
     try:
         weight = float(input("Enter your weight in kg: "))
@@ -23,12 +25,13 @@ while True:
             raise AssertionError('Weight needs to be in Kg. e.g: 61, 84..')
         break
     except AssertionError as e:
-        print(e)         
-
+        print(e)    
+        
+# enter height in cm
 while True:
     try:
         height = float(input("Enter your height in cm: "))
-        # asserting weight is in Kg
+        # asserting height in cm
         if not height > 100:
             raise AssertionError('Height needs to be in centimeters. e.g: 167, 179..')
         break
