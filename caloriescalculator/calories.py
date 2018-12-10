@@ -34,10 +34,10 @@ class Calories():
         #tdee = act_mult*self.BMR()
         return tdee
     
-    def bulk(self, percentage = 0.2):
-        return self.TDEE()*(1+percentage)
+    def bulk(self, percentage = 0.2, act_mult = 1.4):
+        return self.TDEE(act_mult = act_mult)*(1+percentage)
     
-    def cut(self, percentage = 0.2):
-        return self.TDEE()*(1-percentage)
+    def cut(self, percentage = 0.2, act_mult = 1.4):
+        return self.TDEE(act_mult = act_mult)*(1-percentage)
     
     
