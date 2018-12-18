@@ -54,7 +54,27 @@ print('''Your daily calorie intake:
 {} for losing
 {} for gaining'''.format(C.TDEE(act_mult = activity), C.cut(act_mult = activity), C.bulk(act_mult = activity)))
 
+
+# enter your goal
+while True:
+    try:
+        goal = str(input("What is your goal? Enter M for maintaining, L for losing or G for gaining: "))  
+        if goal not in ['M','L','G']:
+            raise AssertionError('Please enter the letter M, L or G')
+        break
+    except AssertionError as e:
+        print(e)
+        
+if goal == 'M':
+    total_cal = C.TDEE(act_mult = activity)
+elif goal == 'L':
+    total_cal = C.cut(act_mult = activity)
+elif goal == 'G':
+    total_cal = C.bulk(act_mult = activity)
+    
+    
 protein = C.protein_intake(weight)
+
 
 print('''Your daily minimum protein intake is: {} grams'''.format(protein))
 
