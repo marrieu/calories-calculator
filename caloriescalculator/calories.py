@@ -40,4 +40,8 @@ class Calories():
     def cut(self, percentage = 0.2, act_mult = 1.4):
         return self.TDEE(act_mult = act_mult)*(1-percentage)
     
+    def protein_intake(self, weight, mult = 2.2):
+        return self.weight*mult
     
+
+

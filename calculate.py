@@ -52,7 +52,7 @@ Enter your activity multiplier according to the table above (number between 1.2 
 print('''Your daily calorie intake:
 {} for maintaining
 {} for losing
-{} for gaining '''.format(round(C.TDEE(act_mult = activity)), round(C.cut(act_mult = activity)), round(C.bulk(act_mult = activity))))
+{} for gaining'''.format(round(C.TDEE(act_mult = activity)), round(C.cut(act_mult = activity)), round(C.bulk(act_mult = activity))))
 
-
+print('''Your daily minimum protein intake is: {} grams'''.format(round(C.protein_intake(weight))))
 
