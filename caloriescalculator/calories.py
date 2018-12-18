@@ -32,16 +32,16 @@ class Calories():
     def TDEE(self, act_mult = 1.4):
         tdee = self.BMR(self.sex)*act_mult
         #tdee = act_mult*self.BMR()
-        return tdee
+        return round(tdee)
     
     def bulk(self, percentage = 0.2, act_mult = 1.4):
-        return self.TDEE(act_mult = act_mult)*(1+percentage)
+        return round(self.TDEE(act_mult = act_mult)*(1+percentage))
     
     def cut(self, percentage = 0.2, act_mult = 1.4):
-        return self.TDEE(act_mult = act_mult)*(1-percentage)
+        return round(self.TDEE(act_mult = act_mult)*(1-percentage))
     
     def protein_intake(self, weight, mult = 2.2):
-        return self.weight*mult
+        return round(self.weight*mult)
     
 
 
