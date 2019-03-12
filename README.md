@@ -11,4 +11,4 @@ python calculate.py
 
 ```
 
-Enter all the required information
+Enter required information and press enter
