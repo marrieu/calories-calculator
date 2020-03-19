@@ -10,7 +10,7 @@ class Calories():
     ----------
     weight : float
         weight of the person
-    height : int
+    height : float
         height of the person
     age : int
         age of the person
